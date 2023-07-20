@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family= Krona+One & family= Montserrat:wght@400;600 & display=swap') ;
+
+:root {
+    --cor--primeira:#03001C;
+    --cor--segunda: #301E67;
+    --cor--terceira: #5B8FB9; 
+    --cor--quarta: #B6EADA; 
+    --cor--quinta: #272727; 
+
+    /* fontes*/
+    --fonte--primeira: 'Krona One', sans-serif;
+    --fonte--segunda: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100vh; /* utilizar 100% da pagina */
+    background-color: var(--cor--primeira);
+    color: var(--cor--quarta);
+}
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__link1e2 {
+    font-family: var(--fonte--segunda);
+    font-size: 1.5rem; /* 1 rem EQUIVALE 16px*/
+    font-weight: 600;
+    color: var(--cor--terceira);
+    text-decoration: none;
+
+}
+.apresentação__imagem {
+    width: 35%;
+
+}
+.titulo-destaque {
+    color:var(--cor--segunda);
+}
+h1{
+    font-weight: bold;
+}
+span{
+    color:var(--cor--segunda);
+    border: 1px solidvar(--cor--segunda);
+    padding: 1px; 
+}
+.apresentação { 
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px; /* esse gap separa o texto da imgaem*/
+}
+
+.apresentação__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.apresentação__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte--primeira);
+}
+.apresentação__paragrafo1 {
+    font-size: 1.5rem;
+    font-family: var(--fonte--segunda);
+}
+.titulo__link {
+    font-family: var(--fonte--primeira);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentação__links {
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column; /* colocar em coluna*/ 
+    align-items: center;
+    gap: 30px;
+}
+.link1e2 {
+    border: 2px solid var(--cor--terceira); /* solid é o estilo da borda*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    border-radius: 45px; /* deixa as bordas arredondadas */  
+    font-size: 1.5rem;
+    padding: 15px 0;
+    text-decoration: none; /* eliminou o sublinhado*/
+    color: var(--cor--terceira);
+    font-family: var(--fonte--segunda);
+    font-weight: 600; /* redirecionou para fonte da url la em cima*/
+}
+/* hover serve para dar efeito quando o mause passar por cima*/
+.link1e2:hover  {
+    background-color: var(--cor--quinta);
+    font-size: 2rem;
+
+    
+}
+.rodape {
+    color: var(--cor--primeira);
+    background-color: var(--cor--terceira);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte--segunda);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+/* "Media query" linha de código para limitar a configuração padrão quando a tela for diminuida. */
+@media (max-width:1200px) {
+    .cabecalho {
+        padding: 5%;
+    } 
+    .cabecalho__menu {
+        justify-content: center;   
+    }
+    .apresentação {
+        flex-direction: column;
+        padding: 5%;
+    }
+    .apresentação__conteudo {
+        width: auto;
+    }
+    .link1e2 {
+        width: auto;
+        padding: auto;
+    }
+    
+}
